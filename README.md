@@ -1,7 +1,3 @@
-<p align="center">
-  <img width="250" height="250" src="./curtail.png">
-</p>
-
 <h1 align="center">Gridsome Plugin Copy Build</h1>
 
 <p align="center">A simple plugin for your Gridsome project that lets you copy the dist files to another directory after building<p>
