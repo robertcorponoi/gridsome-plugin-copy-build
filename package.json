@@ -1,6 +1,6 @@
 {
   "name": "gridsome-plugin-copy-build",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Takes the contents of the Gridsome build and copies them to a destination.",
   "main": "index.js",
   "scripts": {
@@ -26,10 +26,10 @@
     "chai": "^4.2.0",
     "chai-fs": "^2.0.0",
     "mocha": "^6.1.4",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.3"
   },
   "dependencies": {
     "fs-extra": "^8.1.0",
-    "simple-git": "^1.116.0"
+    "simple-git": "^1.121.0"
   }
 }
