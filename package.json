@@ -1,6 +1,6 @@
 {
   "name": "gridsome-plugin-copy-build",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Takes the contents of the Gridsome build and copies them to a destination.",
   "main": "index.js",
   "scripts": {
@@ -29,7 +29,6 @@
     "typescript": "^3.5.3"
   },
   "dependencies": {
-    "fs-extra": "^8.1.0",
-    "simple-git": "^1.121.0"
+    "fs-extra": "^8.1.0"
   }
 }

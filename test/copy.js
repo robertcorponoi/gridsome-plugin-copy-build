@@ -31,7 +31,9 @@ describe('Copying files', () => {
 
   });
 
-  it('should take the contents of our fake dist folder and copy them into the target directory', (done) => {
+  it('should take the contents of our fake dist folder and copy them into the target directory', function (done) {
+
+    this.timeout(10000);
 
     setTimeout(() => {
       
