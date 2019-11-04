@@ -4,17 +4,11 @@ import * as fs from 'fs-extra';
 
 /**
  * Takes the contents of the Gridsome build and copies them to a destination.
- * 
- * @author Robert Corponoi <robertcorponoi@gmail.com>
- * 
- * @version 0.1.0
  */
 module.exports = class GridsomePluginCopyBuild {
 
   /**
    * The directory to copy the build files to.
-   * 
-   * @since 0.1.0
    * 
    * @property {string}
    */
@@ -22,8 +16,6 @@ module.exports = class GridsomePluginCopyBuild {
 
   /**
    * A reference to the dist folder of the application using this plugin.
-   * 
-   * @since 0.1.0
    * 
    * @property {string}
    */
@@ -46,8 +38,6 @@ module.exports = class GridsomePluginCopyBuild {
 
   /**
    * Copies the files from the dist folder to the target directory.
-   * 
-   * @since 0.1.0
    * 
    * @private
    */

@@ -10,10 +10,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var fs = __importStar(require("fs-extra"));
 /**
  * Takes the contents of the Gridsome build and copies them to a destination.
- *
- * @author Robert Corponoi <robertcorponoi@gmail.com>
- *
- * @version 0.1.0
  */
 module.exports = /** @class */ (function () {
     /**
@@ -24,8 +20,6 @@ module.exports = /** @class */ (function () {
         var _this = this;
         /**
          * A reference to the dist folder of the application using this plugin.
-         *
-         * @since 0.1.0
          *
          * @property {string}
          */
@@ -38,8 +32,6 @@ module.exports = /** @class */ (function () {
     }
     /**
      * Copies the files from the dist folder to the target directory.
-     *
-     * @since 0.1.0
      *
      * @private
      */
