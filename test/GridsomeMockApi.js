@@ -5,12 +5,6 @@
  */
 module.exports = class GridsomeMockApi {
 
-  constructor() {
-
-
-
-  }
-
   afterBuild(fn) {
 
     fn();

@@ -1,3 +1,16 @@
+0.2.0 2019-11-04
+==================
+* [FEATURE] Moved the generic options object into a class so that it can be more easily expanded later.
+* [MISC] Made instance properties private as they have no need to be accessed.
+* [MISC] Added underscores to private properties.
+
+0.1.3 2019-11-04
+==================
+* [FEATURE] Updated dependencies to their latest versions.
+* [MISC] Added more badges to README.
+* [MISC] Fixed typos in README.
+* [MISC] Removed unnecessary jsdoc comments.
+
 0.1.3 2019-11-04
 ==================
 * [FEATURE] Updated dependencies to their latest versions.
