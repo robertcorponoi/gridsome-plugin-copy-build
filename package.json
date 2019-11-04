@@ -1,6 +1,6 @@
 {
   "name": "gridsome-plugin-copy-build",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Takes the contents of the Gridsome build and copies them to a destination.",
   "main": "index.js",
   "scripts": {
@@ -22,11 +22,11 @@
   "author": "Robert Corponoi",
   "license": "MIT",
   "devDependencies": {
-    "@types/fs-extra": "^8.0.0",
+    "@types/fs-extra": "^8.0.1",
     "chai": "^4.2.0",
     "chai-fs": "^2.0.0",
-    "mocha": "^6.1.4",
-    "typescript": "^3.5.3"
+    "mocha": "^6.2.2",
+    "typescript": "^3.6.4"
   },
   "dependencies": {
     "fs-extra": "^8.1.0"
