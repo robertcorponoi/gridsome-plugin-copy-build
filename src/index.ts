@@ -1,38 +1,43 @@
 'use strict'
 
 import * as fs from 'fs-extra';
+import Options from './options/Options';
 
 /**
- * Takes the contents of the Gridsome build and copies them to a destination.
+ * Takes the contents of the Gridsome build and copies them to a target destination.
  */
 module.exports = class GridsomePluginCopyBuild {
 
   /**
-   * The directory to copy the build files to.
+   * A reference to the options for this instance.
    * 
-   * @property {string}
+   * @private
+   * 
+   * @property {Options}
    */
-  targetDir: string;
+  private _options: Options;
 
   /**
-   * A reference to the dist folder of the application using this plugin.
+   * The dist folder of the application using this plugin.
+   * 
+   * @private
    * 
    * @property {string}
    */
-  dist: string = `${process.cwd()}/dist`;
+  private _dist: string = `${process.cwd()}/dist`;
 
   /**
    * @param {Object} options
    * @param {string} options.targetDir The directory to copy the build files to.
    */
-  constructor(api: any, options: any) {
+  constructor(api: any, options: Object = {}) {
 
-    this.targetDir = options.targetDir;
+    this._options = new Options(options);
 
     /**
      * Wait until the Gridsome build is finished to copy the files.
      */
-    api.afterBuild(() => this.boot());
+    api.afterBuild(() => this._boot());
 
   }
 
@@ -41,12 +46,12 @@ module.exports = class GridsomePluginCopyBuild {
    * 
    * @private
    */
-  private boot() {
+  private _boot() {
 
-    fs.copy(this.dist, this.targetDir)
+    fs.copy(this._dist, this._options.targetDir)
       .then(() => {
 
-        console.log(`Copied contents of ${this.dist} to ${this.targetDir}`);
+        console.log(`Copied contents of ${this._dist} to ${this._options.targetDir}`);
 
       })
       .catch((err) => {
