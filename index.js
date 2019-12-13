@@ -19,6 +19,7 @@ module.exports = /** @class */ (function () {
     /**
      * @param {Object} options
      * @param {string} options.targetDir The directory to copy the build files to.
+     * @param {boolean} [options.verbose=false] Indicates whether info logs should be output to the console or not.
      */
     function GridsomePluginCopyBuild(api, options) {
         var _this = this;
@@ -32,9 +33,8 @@ module.exports = /** @class */ (function () {
          */
         this._dist = process.cwd() + "/dist";
         this._options = new Options_1.default(options);
-        /**
-         * Wait until the Gridsome build is finished to copy the files.
-         */
+        if (!this._options.targetDir)
+            throw new Error('A target directory must be specified');
         api.afterBuild(function () { return _this._boot(); });
     }
     /**
@@ -44,13 +44,18 @@ module.exports = /** @class */ (function () {
      */
     GridsomePluginCopyBuild.prototype._boot = function () {
         var _this = this;
+        if (this._options.verbose) {
+            console.info('Gridsome Plugin Copy Build - Starting');
+            console.info("Gridsome Plugin Copy Build - Copying build directory to " + this._options.targetDir + "...");
+        }
         fs.copy(this._dist, this._options.targetDir)
             .then(function () {
-            console.log("Copied contents of " + _this._dist + " to " + _this._options.targetDir);
+            if (_this._options.verbose)
+                console.info("Gridsome Plugin Copy Build - Finished copying contents of " + _this._dist + " to " + _this._options.targetDir);
+            else
+                console.info('Gridsome Plugin Copy Build - Finished');
         })
-            .catch(function (err) {
-            throw new Error(err);
-        });
+            .catch(function (err) { throw err; });
     };
     return GridsomePluginCopyBuild;
 }());

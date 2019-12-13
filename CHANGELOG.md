@@ -1,12 +1,15 @@
-0.2.0 2019-11-04
+1.0.0 2019-12-13
 ==================
-* [FEATURE] Moved the generic options object into a class so that it can be more easily expanded later.
-* [MISC] Made instance properties private as they have no need to be accessed.
-* [MISC] Added underscores to private properties.
+* [FEATURE] Added verbose option for more detailed output.
+* [FEATURE] Added test for verbose option.
+* [MISC] Added options documentation to README.
+* [MISC] Updated typescript to its latest version.
+* [MISC] Added more badges to README.
+* [MISC] Updated verbiage in README to be more concise.
 
 0.1.3 2019-11-04
 ==================
-* [FEATURE] Updated dependencies to their latest versions.
+* [MISC] Updated dependencies to their latest versions.
 * [MISC] Added more badges to README.
 * [MISC] Fixed typos in README.
 * [MISC] Removed unnecessary jsdoc comments.

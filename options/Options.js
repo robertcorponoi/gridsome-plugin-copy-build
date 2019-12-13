@@ -17,6 +17,14 @@ var Options = /** @class */ (function () {
          * @default process.cwd()
          */
         this.targetDir = process.cwd();
+        /**
+         * Indicates whether info logs should be output to the console or not.
+         *
+         * @property {boolean}
+         *
+         * @default false
+         */
+        this.verbose = false;
         Object.assign(this, options);
     }
     return Options;

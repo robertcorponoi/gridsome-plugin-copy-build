@@ -1,7 +1,7 @@
 {
   "name": "gridsome-plugin-copy-build",
-  "version": "0.2.0",
-  "description": "Takes the contents of the Gridsome build and copies them to a destination.",
+  "version": "1.0.0",
+  "description": "A plugin for your Gridsome project that lets you copy the files from the dist directory to another directory of your choosing after running a build.",
   "main": "index.js",
   "scripts": {
     "tsc": "tsc",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:robertcoronoi/gridsome-plugin-copy-build"
+    "url": "https://github.com/robertcoronoi/gridsome-plugin-copy-build"
   },
   "keywords": [
     "copy",
@@ -26,7 +26,7 @@
     "chai": "^4.2.0",
     "chai-fs": "^2.0.0",
     "mocha": "^6.2.2",
-    "typescript": "^3.6.4"
+    "typescript": "^3.7.3"
   },
   "dependencies": {
     "fs-extra": "^8.1.0"
