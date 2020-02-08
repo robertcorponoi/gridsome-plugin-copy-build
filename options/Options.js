@@ -30,4 +30,3 @@ var Options = /** @class */ (function () {
     return Options;
 }());
 exports.default = Options;
-;

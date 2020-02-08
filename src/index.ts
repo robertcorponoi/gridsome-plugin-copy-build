@@ -7,7 +7,6 @@ import Options from './options/Options';
  * A plugin for your Gridsome project that lets you copy the files from the dist directory to another directory of your choosing after running a build.
  */
 module.exports = class GridsomePluginCopyBuild {
-
   /**
    * A reference to the options for this instance.
    * 
@@ -32,13 +31,11 @@ module.exports = class GridsomePluginCopyBuild {
    * @param {boolean} [options.verbose=false] Indicates whether info logs should be output to the console or not.
    */
   constructor(api: any, options: Object = {}) {
-
     this._options = new Options(options);
 
     if (!this._options.targetDir) throw new Error('A target directory must be specified');
 
     api.afterBuild(() => this._boot());
-
   }
 
   /**

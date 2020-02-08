@@ -27,8 +27,6 @@ export default class Options {
    * @param {Object} options The initialization options passed to the plugin.
    */
   constructor(options: Object) {
-
     Object.assign(this, options);
-
   }
-};
+}

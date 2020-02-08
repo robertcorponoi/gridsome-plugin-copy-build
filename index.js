@@ -13,7 +13,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var fs = __importStar(require("fs-extra"));
 var Options_1 = __importDefault(require("./options/Options"));
 /**
- * Takes the contents of the Gridsome build and copies them to a target destination.
+ * A plugin for your Gridsome project that lets you copy the files from the dist directory to another directory of your choosing after running a build.
  */
 module.exports = /** @class */ (function () {
     /**

@@ -12,7 +12,6 @@ let gridsomeMockApi;
 let gridsomePluginCopyBuild;
 
 describe('Copying files', () => {
-
   beforeEach(() => {
     gridsomeMockApi = new GridsomeMockApi();
 
@@ -24,7 +23,7 @@ describe('Copying files', () => {
 
     gridsomePluginCopyBuild = null;
 
-    fs.unlink('C:\\Users\\Bob\\Documents\\test\\hello.html');
+    fs.unlink('C:\\Users\\Bob\\Documents\\test\\hello.html').catch(err => console.log(err));
   });
 
   it('should take the contents of our fake dist folder and copy them into the target directory', function (done) {
@@ -48,5 +47,4 @@ describe('Copying files', () => {
       done();
     }, 2000);
   });
-
 });
