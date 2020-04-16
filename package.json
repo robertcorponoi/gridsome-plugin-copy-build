@@ -22,13 +22,13 @@
   "author": "Robert Corponoi",
   "license": "MIT",
   "devDependencies": {
-    "@types/fs-extra": "^8.0.1",
+    "@types/fs-extra": "^8.1.0",
     "chai": "^4.2.0",
     "chai-fs": "^2.0.0",
-    "mocha": "^7.0.1",
-    "typescript": "^3.7.5"
+    "mocha": "^7.1.1",
+    "typescript": "^3.8.3"
   },
   "dependencies": {
-    "fs-extra": "^8.1.0"
+    "fs-extra": "^9.0.0"
   }
 }
